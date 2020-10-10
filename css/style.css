@@ -1,0 +1,468 @@
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/Inter-Regular.woff") format("woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url("/assets/fonts/Inter-SemiBold.woff2") format("woff2"), url("/assets/fonts/Inter-SemiBold.woff") format("woff");
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box
+}
+
+* :after, * :before {
+    box-sizing: border-box
+}
+
+html, body, div, main, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output,
+ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+    letter-spacing: -0.009em
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+nav, section, summary, main {
+    display: block
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer
+}
+
+ol,
+ul {
+    list-style-type: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal
+}
+
+em,
+i {
+    font-style: italic
+}
+
+strong,
+b {
+    font-weight: bold
+}
+
+u {
+    text-decoration: underline
+}
+
+pre,
+code {
+    font-family: Monaco, Courier, monospace
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    word-wrap: break-word
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    width: 100%;
+    height: auto
+}
+
+:root {
+    --font-size: 1.05rem;
+    --font-height: 1.8;
+    --font-weight: normal;
+    --font-family: 'Inter', sans-serif;
+    --font-headings: 'Inter SemiBold', sans-serif;
+    --text-lg: 1.45rem;
+    --text-md: 1.25rem;
+    --bg: #b2b2b2 ;
+    --bg-dark: #fff;
+    --text: #1A1A1A;
+    --text-light: #4c4c4c;
+    --text-lighter: black;
+    --text-dark: #444444;
+    --spacer: 2rem;
+    --spacer-sm: 1rem;
+    --spacer-0: 0;
+    --transition: transform 300ms linear;
+    --grid-gap: 3rem;
+    font-family: var(--font-family);
+    font-size: var(--font-height);
+    font-weight: var(--font-weight);
+    color: var(--text);
+    grid-gap: var(--grid-gap);
+    text-rendering: geometricPrecision
+}
+
+html,
+body {
+    background: var(--bg)
+}
+
+body {
+    margin: 0;
+    position: relative
+}
+
+body * {
+    font-size: var(--font-size);
+    line-height: var(--font-height);
+    color: var(--text)
+}
+
+::-moz-selection {
+    background: var(--text-dark);
+    color: var(--bg)
+}
+
+::selection {
+    background: var(--text-dark);
+    color: var(--bg)
+}
+
+em {
+    font-style: italic
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 40%;
+    grid-gap: var(--grid-gap);
+    padding: 10%
+}
+
+.grid:last-child {
+    padding-top: 0
+}
+
+.space-left {
+    margin-left: calc(var(--spacer-sm) / 2)
+}
+
+.space-right {
+    margin-right: calc(var(--spacer-sm) / 2)
+}
+
+.spacer-0 {
+    margin: var(--spacer-0) !important
+}
+
+article {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto
+}
+
+section,
+p,
+section img,
+.archive,
+.latest {
+    margin-bottom: var(--spacer)
+}
+
+.post,
+section.bio {
+    max-width: 550px
+}
+
+section figure:first-of-type {
+    margin-top: calc(var(--spacer) * 3)
+}
+
+section figure:last-of-type {
+    margin-bottom: calc(var(--spacer) * 2)
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-headings)
+}
+
+h1,
+.dot {
+    margin-bottom: calc(var(--spacer) * 2);
+    font-size: var(--text-lg)
+}
+
+h2 {
+    margin-bottom: calc(var(--spacer) / 2);
+    font-size: var(--text-md)
+}
+
+h3 {
+    font-size: var(--text-md);
+}
+
+hr {
+    display: block;
+    border: none;
+    height: 1px;
+    margin-top: calc(var(--spacer) * 2);
+    margin-bottom: calc(var(--spacer) * 2);
+    background: var(--text-light);
+    width: 30%
+}
+
+section:last-child {
+    margin-bottom: 0
+}
+
+section.coffee {
+    margin-top: 10%
+}
+
+a {
+    color: var(--text);
+    background-image: linear-gradient(to right, var(--text-dark), var(--text-dark));
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 1px;
+    padding-bottom: 0.1rem;
+    transition: color 300ms ease-out
+}
+
+a:hover {
+    background-size: 0% 1px;
+    color: var(--text-light)
+}
+
+.archive a.active:before,
+.home .archive li:first-child a:before {
+    content: '';
+    margin-right: calc(var(--spacer) / 3)
+}
+
+.library .archive li:first-child a:before {
+    content: none
+}
+
+.archive a {
+    color: var(--text);
+    width: auto;
+    font-size: var(--font-size);
+    background: none
+}
+
+.archive a:hover {
+    color: var(--text-light)
+}
+
+.coffee a,
+a.cta {
+    line-height: var(--font-height);
+    display: inline-block;
+    padding: calc(var(--spacer) / 3) var(--spacer);
+    border: 1px solid var(--text-dark);
+    border-radius: 9999px;
+    transition: color 200ms linear, border 200ms linear, background-color 200ms linear;
+    cursor: pointer;
+    background-image: none
+}
+
+.coffee a:hover,
+a.cta:hover {
+    color: var(--bg);
+    border: 1px solid var(--text);
+    background-image: none;
+    background-color: var(--text)
+}
+
+.coffee a:after,
+a.cta:after {
+    border: none
+}
+
+.brew {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+.menu li {
+    margin-bottom: 0.85rem
+}
+
+.line {
+    display: inline-block;
+    ;
+    width: var(--font-size);
+    height: 1px;
+    vertical-align: middle;
+    background-color: var(--text)
+}
+
+ol.order,
+ol.order-less,
+.post ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-bottom: var(--spacer)
+}
+
+ol.order li {
+    margin-bottom: var(--spacer)
+}
+
+ol.order-less li,
+.post ol li {
+    margin-bottom: var(--spacer)
+}
+
+ol.order li h2 {
+    margin-bottom: 0.85rem
+}
+
+ol.order li:last-child,
+ol.order-less:last-child,
+.post ol li:last-child,
+ul.order li:last-child {
+    margin-bottom: 0
+}
+
+ul.order,
+.post ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-bottom: var(--spacer)
+}
+
+ul.order li,
+.post li {
+    margin-bottom: var(--spacer) / 2
+}
+
+blockquote {
+    border-left: 1px solid var(--text-light);
+    padding-left: calc(var(--spacer) / 2);
+    margin-left: calc(var(--spacer) * -0.5);
+    font-style: italic
+}
+
+.dot {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-dark)
+}
+
+/* Some Media Queries */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .grid:last-child {
+        padding-top: 10%
+    }
+
+    .col-1 {
+        grid-row-start: 3;
+        grid-row-end: 4
+    }
+
+    .col-2 {
+        grid-row-start: 1;
+        grid-row-end: 2
+    }
+
+    .line,
+    a:after {
+        height: 1px
+    }
+
+    .line {
+        width: 1.5rem
+    }
+}
+
+/* Light Switch */
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background: var(--bg-dark)
+    }
+
+    body * {
+        color: var(--text-lighter)
+    }
+
+    ::-moz-selection {
+        background: var(--bg);
+        color: var(--text)
+    }
+
+    ::selection {
+        background: var(--bg);
+        color: var(--text)
+    }
+
+    a,
+    .archive a {
+        color: var(--text-light)
+    }
+
+    a:hover,
+    .archive a:hover {
+        color: var(--text-lighter)
+    }
+
+    .coffee a:hover,
+    a.cta:hover {
+        color: var(--text);
+        border: 1px solid var(--bg);
+        background-image: none;
+        background-color: var(--bg)
+    }
+
+    hr {
+        background: var(--text-dark)
+    }
+
+    blockquote {
+        border-left: 1px solid var(--text-dark)
+    }
+
+    .dot {
+        background-color: var(--bg)
+    }
+}
