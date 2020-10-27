@@ -195,7 +195,7 @@ article {
 section,
 p,
 section img,
-.archive,
+.blog,
 .latest {
     margin-bottom: var(--spacer)
 }
@@ -267,24 +267,24 @@ a:hover {
     color: var(--text-light)
 }
 
-.archive a.active:before,
-.home .archive li:first-child a:before {
+.blog a.active:before,
+.home .blog li:first-child a:before {
     content: '';
     margin-right: calc(var(--spacer) / 3)
 }
 
-.library .archive li:first-child a:before {
+.library .blog li:first-child a:before {
     content: none
 }
 
-.archive a {
+.blog a {
     color: var(--text);
     width: auto;
     font-size: var(--font-size);
     background: none
 }
 
-.archive a:hover {
+.blog a:hover {
     color: var(--text-light)
 }
 
@@ -437,12 +437,12 @@ blockquote {
     }
 
     a,
-    .archive a {
+    .blog a {
         color: var(--text-light)
     }
 
     a:hover,
-    .archive a:hover {
+    .blog a:hover {
         color: var(--text-lighter)
     }
 
@@ -462,7 +462,6 @@ blockquote {
         border-left: 1px solid var(--text-dark)
     }
 
-    .dot {
-        background-color: var(--bg)
+
     }
 }
