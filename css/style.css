@@ -361,7 +361,7 @@ ul.order li:last-child {
 
 ul.order,
 .post ul {
-    list-style-type: circle;
+    list-style-type: disc;
     list-style-position: outside;
     margin-bottom: var(--spacer)
 }
