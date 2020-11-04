@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Inter";
-    src: url("/assets/fonts/Inter Web/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/Inter Web/Inter-Regular.woff") format("woff");
+    src: local('Inter Regular'), local('Inter-Regular'), url("/assets/fonts/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/Inter-Regular.woff") format("woff");
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter SemiBold";
-    src: url("/assets/fonts/Inter Web/Inter-SemiBold.woff2") format("woff2"), url("/assets/fonts/Inter Web/Inter-SemiBold.woff") format("woff");
+    src: local('Inter Semi Bold'), local('Inter-SemiBold'), url("/assets/fonts/Inter-SemiBold.woff2") format("woff2"), url("/assets/fonts/Inter-SemiBold.woff") format("woff");
     font-style: normal;
 }
 
@@ -106,19 +106,19 @@ img {
 }
 
 :root {
-    --font-size: 1.05rem;
+    --font-size: 1.15rem;
     --font-height: 1.8;
     --font-weight: normal;
     --font-family: 'Inter', sans-serif;
     --font-headings: 'Inter SemiBold', sans-serif;
-    --text-lg: 1.45rem;
-    --text-md: 1.25rem;
-    --bg: white ;
-    --bg-dark: #0a0a0a;
+    --text-lg: 1.55rem;
+    --text-md: 1.35rem;
+    --bg: white;
+    --bg-dark: #010101;
     --text: #1A1A1A;
-    --text-light: #A6A6A6;
+    --text-light: #aaaaaa;
     --text-lighter: white;
-    --text-dark: #7F7F7F;
+    --text-dark: #444444;
     --spacer: 2rem;
     --spacer-sm: 1rem;
     --spacer-0: 0;
@@ -195,7 +195,7 @@ article {
 section,
 p,
 section img,
-.blog,
+.archive,
 .latest {
     margin-bottom: var(--spacer)
 }
@@ -267,24 +267,24 @@ a:hover {
     color: var(--text-light)
 }
 
-.blog a.active:before,
-.home .blog li:first-child a:before {
-    content: '';
+.archive a.active:before,
+.home .archive li:first-child a:before {
+    content: 'âŸ¶';
     margin-right: calc(var(--spacer) / 3)
 }
 
-.library .blog li:first-child a:before {
+.library .archive li:first-child a:before {
     content: none
 }
 
-.blog a {
+.archive a {
     color: var(--text);
     width: auto;
     font-size: var(--font-size);
     background: none
 }
 
-.blog a:hover {
+.archive a:hover {
     color: var(--text-light)
 }
 
@@ -293,7 +293,7 @@ a.cta {
     line-height: var(--font-height);
     display: inline-block;
     padding: calc(var(--spacer) / 3) var(--spacer);
-    border: 1px solid var(--text-dark);
+    border: 2px solid var(--text-dark);
     border-radius: 9999px;
     transition: color 200ms linear, border 200ms linear, background-color 200ms linear;
     cursor: pointer;
@@ -303,7 +303,7 @@ a.cta {
 .coffee a:hover,
 a.cta:hover {
     color: var(--bg);
-    border: 1px solid var(--text);
+    border: 2px solid var(--text);
     background-image: none;
     background-color: var(--text)
 }
@@ -361,7 +361,7 @@ ul.order li:last-child {
 
 ul.order,
 .post ul {
-    list-style-type: disc;
+    list-style-type: circle;
     list-style-position: outside;
     margin-bottom: var(--spacer)
 }
@@ -437,19 +437,19 @@ blockquote {
     }
 
     a,
-    .blog a {
+    .archive a {
         color: var(--text-light)
     }
 
     a:hover,
-    .blog a:hover {
+    .archive a:hover {
         color: var(--text-lighter)
     }
 
     .coffee a:hover,
     a.cta:hover {
         color: var(--text);
-        border: 1px solid var(--bg);
+        border: 2px solid var(--bg);
         background-image: none;
         background-color: var(--bg)
     }
@@ -462,6 +462,7 @@ blockquote {
         border-left: 1px solid var(--text-dark)
     }
 
-
+    .dot {
+        background-color: var(--bg)
     }
 }
