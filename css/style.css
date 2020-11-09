@@ -111,10 +111,10 @@ img {
     --font-weight: normal;
     --font-family: 'Inter', sans-serif;
     --font-headings: 'Inter SemiBold', sans-serif;
-    --text-lg: 1.55rem;
-    --text-md: 1.35rem;
+    --text-lg: 1.45rem;
+    --text-md: 1.25rem;
     --bg: white;
-    --bg-dark: #010101;
+    --bg-dark: ##1a1a1a;
     --text: #1A1A1A;
     --text-light: #aaaaaa;
     --text-lighter: white;
